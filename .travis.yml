@@ -10,7 +10,7 @@ script:
 deploy:
     skip_cleanup: false
     provider: script
-    script: "fab docker_build docker_tag docker_deploy"
+    script: "fab docker_build docker_tag docker_push"
     on:
         branch: master
 
