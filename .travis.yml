@@ -1,0 +1,15 @@
+language: python
+sudo: false
+services: 
+    - docker
+
+script:
+    - export CTAG="-$TRAVIS_COMMIT"
+    - "fab docker_build" 
+deploy:
+    skip_cleanup: false
+    provider: script
+    script: "fab docker_build"
+    on:
+        branch: master
+
