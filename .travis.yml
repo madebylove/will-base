@@ -3,7 +3,7 @@ sudo: false
 services: 
     - docker
 install:
-    - pip install -U fabric=1.14.0
+    - pip install -U fabric==1.14.0
 script:
     - export CTAG="-$TRAVIS_COMMIT"
     - "fab docker_build" 
